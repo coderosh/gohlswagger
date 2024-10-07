@@ -23,7 +23,7 @@
     ],
     "repository": {
         "detail-swag": {
-            "match": "@(Summary|Description)[ \t]*(.*)",
+            "match": "@(Summary|Description|ID)[ \t]*(.*)",
             "name": "storage.type.class",
             "captures": {
                 "2": {
