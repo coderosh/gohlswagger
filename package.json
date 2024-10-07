@@ -1,0 +1,39 @@
+{
+  "name": "go-hl-swagger",
+  "displayName": "Swaggo Highlight & Snippets",
+  "description": "Highlight swaggo comments using not so semantic scopes",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderosh/gohlswagger"
+  },
+  "publisher": "Roshan",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/go.tmLanguage.json",
+        "scopeName": "go-swag.injection",
+        "injectTo": [
+          "source.go"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "go",
+        "path": "./snippets/go.json"
+      }
+    ]
+  },
+ 
+  "devDependencies": {
+    "vscode": "1.1.37"
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "@Description": {
+        "prefix": "swag:desc",
+        "body": "// @Description\t\t${1:description}"
+    },
+    "@Summary": {
+        "prefix": "swag:summary",
+        "body": "// @Summary\t\t\t${1:summary}"
+    },
+    "@Param": {
+      "prefix": "swag:param",
+      "body": "// @Param\t\t\t${1:id}\t${2|query,path,header,body,formData|}\t${3|string,integer,number,boolean,file|}\t${4|true,false|}\t"
+    },
+    "@Tags": {
+        "prefix": "swag:tags",
+        "body":"// @Tags\t\t\t${1:Account}"
+    },
+    "@Accept": {
+        "prefix": "swag:accept",
+        "body": "// @Accept\t\t\t${1|json,xml,plain,html,mpfd,x-www-form-urlencoded,json-api,json-stream,octet-stream,png,jpeg,gif|}"
+    },
+    "@Produce": {
+        "prefix": "swag:produce",
+        "body": "// @Produce\t\t\t${1|json,xml,plain,html,mpfd,x-www-form-urlencoded,json-api,json-stream,octet-stream,png,jpeg,gif|}"
+    },
+    "@Success": {
+        "prefix":"swag:success",
+        "body": "// @Success\t\t\t${1|200,201,202,203,204|}\t{${2|object,array,boolean,string,number|}}\t${3:model.Account}"
+    },
+    "@Failure": {
+        "prefix":"swag:failure",
+        "body": "// @Failure\t\t\t${1|400,401,500|}\t{${2|object,array,boolean,string,number|}}\t${3:model.Account}"
+    }
+}

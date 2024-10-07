@@ -1,0 +1,115 @@
+{
+    "scopeName": "go-swag.injection",
+    "injectionSelector": "L:comment.line.double-slash",
+    "patterns": [
+        {
+            "include": "#detail-swag"
+        },
+        {
+            "include": "#single-detail"
+        },
+        {
+            "include": "#status"
+        },
+        {
+            "include": "#param"
+        },
+        {
+            "include": "#router"
+        },
+        {
+            "include": "#godoc"
+        }
+    ],
+    "repository": {
+        "detail-swag": {
+            "match": "@(Summary|Description)[ \t]*(.*)",
+            "name": "storage.type.class",
+            "captures": {
+                "2": {
+                    "name": "string.quoted.double"
+                }
+            }
+        },
+        "single-detail": {
+            "match": "@(Tags|Accept|Produce)[ \t]*(.*)",
+            "name": "storage.type.class",
+            "captures": {
+                "2": {
+                    "name": "entity.name.class"
+                }
+            }
+        },
+        "status": {
+            "match": "@(Success|Failure|Header|response)[ \t]*([0-9]+)[ \t]*({)([^\\s]+)(})[ \t]*([^\\s]+)[ \t]*(.*)",
+            "name": "storage.type.class",
+            "captures": {
+                "2": {
+                    "name": "constant.numeric"
+                },
+                "3": {
+                    "name": "constant.character.escape"
+                },
+                "4": {
+                    "name": "support.class"
+                },
+                "5": {
+                    "name": "constant.character.escape"
+                },
+                "6": {
+                    "name": "support.class"
+                },
+                "7": {
+                    "name":"comment.line"
+                }
+            }
+        },
+        "param": {
+            "match": "@Param[ \t]*(.*)[ \t](query|path|header|body|formData)[ \t]*(.*)[ \t]*(true|false)[ \t]*(.*)",
+            "name": "storage.type.class",
+            "captures": {
+                "1": {
+                    "name": "variable.name"
+                },
+                "2": {
+                    "name": "entity.name.function"
+                },
+                "3": {
+                    "name": "support.class"
+                },
+                "4": {
+                    "name": "constant.character.escape"
+                },
+                "5": {
+                    "name": "comment.block.documentation"
+                }
+            }
+        },
+        "router": {
+            "match": "@Router[ \t]*(.*)[ \t](\\[)(get|post|put|delete|head|connect|options|patch|trace)(\\])",
+            "name": "storage.type.class",
+            "captures": {
+                "1": {
+                    "name": "entity.name.function"
+                },
+                "2": {
+                    "name": "constant.character.escape"
+                },
+                "3": {
+                    "name": "entity.name.method"
+                },
+                "4": {
+                    "name": "constant.character.escape"
+                }
+            }
+        },
+        "godoc": {
+            "match": "(.*)[ \t]*godoc",
+            "captures": {
+                "1": {
+                    "name": "markup.bold"
+                }
+            }
+        }
+    }
+}
