@@ -30,5 +30,13 @@
     "@Failure": {
         "prefix":"swag:failure",
         "body": "// @Failure\t\t\t${1|400,401,500|}\t{${2|object,array,boolean,string,number|}}\t${3:model.Account}"
+    },
+    "@ID": {
+        "prefix":"swag:id",
+        "body": "// @ID\t\t\t\t${1:getAccount}"
+    },
+    "@Router": {
+        "prefix":"swag:router",
+        "body":"// @Router\t\t\t${1:/accounts}\t[${2|get,post,put,patch,delete|}]"
     }
 }

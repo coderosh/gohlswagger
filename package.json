@@ -2,18 +2,19 @@
   "name": "go-hl-swagger",
   "displayName": "Swaggo Highlight & Snippets",
   "description": "Highlight swaggo comments using not so semantic scopes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coderosh/gohlswagger"
+    "url": "https://github.com/coderosh/vscode-swaggo-highlight-snippets"
   },
   "publisher": "Roshan",
   "engines": {
     "vscode": "^1.22.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "grammars": [
