@@ -2,7 +2,7 @@
   "name": "go-hl-swagger",
   "displayName": "Swaggo Highlight & Snippets",
   "description": "Highlight swaggo comments using not so semantic scopes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",
