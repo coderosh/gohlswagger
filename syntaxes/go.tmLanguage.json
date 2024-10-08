@@ -3,7 +3,10 @@
     "injectionSelector": "L:comment.line.double-slash",
     "patterns": [
         {
-            "include": "#detail-swag"
+            "include": "#details"
+        },
+        {
+            "include": "#id"
         },
         {
             "include": "#single-detail"
@@ -22,12 +25,21 @@
         }
     ],
     "repository": {
-        "detail-swag": {
-            "match": "@(Summary|Description|ID)[ \t]*(.*)",
+        "details": {
+            "match": "@(Summary|Description)[ \t]*(.*)",
             "name": "storage.type.class",
             "captures": {
                 "2": {
                     "name": "string.quoted.double"
+                }
+            }
+        },
+        "id": {
+            "match": "@ID[ \t]*(.*)",
+            "name": "storage.type.class",
+            "captures": {
+                "1": {
+                    "name": "entity.name.function"
                 }
             }
         },
@@ -90,7 +102,7 @@
             "name": "storage.type.class",
             "captures": {
                 "1": {
-                    "name": "entity.name.function"
+                    "name": "string.quoted.double"
                 },
                 "2": {
                     "name": "constant.character.escape"
